@@ -1,0 +1,8 @@
+{
+  "name": "Superwheel",
+  "description": "An ultra-premium, dark-themed luxury supercars showroom landing page, styled after high-performance matte-black aesthetics with smooth, interactive GSAP-powered animations and physics-based interactions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
