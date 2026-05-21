@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom branding colors */
+  --color-brand-orange: #f97316;
+  --color-brand-amber: #f59e0b;
+  --color-brand-cyan: #06b6d4;
+  --color-dark-surface: #0a0a0a;
+}
+
+/* Custom styles for an ultra-premium automotive showroom */
+body {
+  background-color: #030303;
+  color: #f3f4f6;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light mode overrides */
+body.theme-light {
+  background-color: #f4f5f7;
+  color: #111827;
+}
+
+body.theme-light ::-webkit-scrollbar-track {
+  background: #f4f5f7;
+}
+
+body.theme-light ::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-color: #e5e7eb;
+}
+
+body.theme-light .panel-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+body.theme-light .panel-glass-interactive {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.theme-light .panel-glass-interactive:hover {
+  border-color: rgba(249, 115, 22, 0.4);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 40px -15px rgba(249, 115, 22, 0.12);
+}
+
+body.theme-light .glow-spot-left {
+  background: radial-gradient(circle 400px at left, rgba(0, 0, 0, 0.02) 0%, transparent 80%);
+}
+
+body.theme-light .glow-spot-right {
+  background: radial-gradient(circle 500px at right, rgba(249, 115, 22, 0.05) 0%, transparent 80%);
+}
+
+body.theme-light .glow-spot-ambient {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.03) 0%, transparent 70%);
+}
+
+/* Custom scrollbar matching liquid amber / matte black theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 9999px;
+  border: 1px solid #171717;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
+/* Premium aesthetic atmospheric glow spots */
+.glow-spot-left {
+  background: radial-gradient(circle 400px at left, rgba(255, 255, 255, 0.05) 0%, transparent 80%);
+}
+
+.glow-spot-right {
+  background: radial-gradient(circle 500px at right, rgba(249, 115, 22, 0.07) 0%, transparent 80%);
+}
+
+.glow-spot-ambient {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.04) 0%, transparent 70%);
+}
+
+/* Glassmorphism panel styling */
+.panel-glass {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.panel-glass-interactive {
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.panel-glass-interactive:hover {
+  border-color: rgba(249, 115, 22, 0.3);
+  background: rgba(20, 20, 20, 0.8);
+  box-shadow: 0 10px 40px -15px rgba(249, 115, 22, 0.15);
+}
+
+/* Keyframe for subtle drift animation matching smoke */
+@keyframes smoke-drift {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translate(5%, 2%) scale(1.05);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.15;
+  }
+}
+
+.animate-smoke-slow {
+  animation: smoke-drift 25s infinite ease-in-out;
+}
+
+.animate-smoke-alternate {
+  animation: smoke-drift 32s infinite ease-in-out alternate;
+}
