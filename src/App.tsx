@@ -10,9 +10,9 @@ import ContactModal from './components/ContactModal';
 import Footer from './components/Footer';
 
 // Define the exact generated high-quality assets
-const HERO_CAR_IMAGE = '/src/assets/images/superwheel_profile_1779331446532.png';
-const INTERIOR_IMAGE = '/src/assets/images/superwheel_interior_1779329709108.png';
-const WHEEL_DETAIL_IMAGE = '/src/assets/images/superwheel_wheel_detail_1779329729121.png';
+import HERO_CAR_IMAGE from './assets/images/superwheel_profile_1779331446532.png';
+import INTERIOR_IMAGE from './assets/images/superwheel_interior_1779329709108.png';
+import WHEEL_DETAIL_IMAGE from './assets/images/superwheel_wheel_detail_1779329729121.png';
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
